@@ -14,12 +14,19 @@ const Navbar = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.5 }}
     >
-      <motion.span
+      {/* <motion.span
         className="font-semibold text-sm px-4 text-gradient cursor-default"
         whileHover={{ scale: 1.1 }}
       >
         AF
-      </motion.span>
+      </motion.span> */}
+      <motion.span
+  className="font-semibold text-sm px-4 text-gradient cursor-pointer"
+  whileHover={{ scale: 1.1 }}
+  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+>
+  AF
+</motion.span>
       <div className="w-px h-5 bg-border" />
       {navItems.map((item) => (
         <motion.button
@@ -33,14 +40,24 @@ const Navbar = () => {
         </motion.button>
       ))}
       <div className="w-px h-5 bg-border" />
-      <motion.a
+      {/* <motion.a
         href="mailto:hello@johndoe.dev"
         className="text-sm font-medium bg-primary text-primary-foreground px-5 py-1.5 rounded-full"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
         Hire Me
-      </motion.a>
+      </motion.a> */}
+      <motion.a
+  href="https://mail.google.com/mail/?view=cm&fs=1&to=ranaferoz792@gmail.com"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-sm font-medium bg-primary text-primary-foreground px-5 py-1.5 rounded-full"
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+>
+  Hire Me
+</motion.a>
     </motion.nav>
   );
 };
